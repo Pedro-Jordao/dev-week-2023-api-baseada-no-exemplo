@@ -48,7 +48,7 @@ public class User {
         this.address = address;
     }
 
-    public Account getCart() {
+    public Account getAccount() {
         return account;
     }
 
