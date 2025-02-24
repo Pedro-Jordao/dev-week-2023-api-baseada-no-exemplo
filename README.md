@@ -25,7 +25,7 @@ classDiagram
         - String description
     }
 
-    User "1" *-- "1" Cart
+    User "1" *-- "1" Account
     User "1" *-- "N" Category 
     User "1" *-- "N" Store 
 ```
