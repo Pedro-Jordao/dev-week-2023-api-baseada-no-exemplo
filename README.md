@@ -9,9 +9,9 @@ classDiagram
         - Store[] stores
     }
 
-    class Cart {
+    class Account {
         - BigDecimal cash
-        - int items
+        - int card_items
     }
 
     class Category {
