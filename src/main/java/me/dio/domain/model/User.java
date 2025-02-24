@@ -15,10 +15,13 @@ public class User {
 
     private String address;
 
+    @OneToOne(cascade = CascadeType.ALL)
     private Account account;
 
+    @OneToMany (cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Store> stores;
 
+    @OneToMany (cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Category> categories;
 
     public Long getId() {
@@ -49,8 +52,8 @@ public class User {
         return account;
     }
 
-    public void setCart(Account cart) {
-        this.account = cart;
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
     public List<Store> getStores() {

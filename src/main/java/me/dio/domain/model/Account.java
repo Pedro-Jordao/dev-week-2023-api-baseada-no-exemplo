@@ -1,11 +1,21 @@
 package me.dio.domain.model;
 
+import jakarta.persistence.*;
+
 import java.math.BigDecimal;
 
+@Entity(name = "tb_account")
 public class Account {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(precision = 13, scale = 2)
     private BigDecimal cash;
-    private int card_items;
+
+
+    private int cart_items;
 
     public Long getId() {
         return id;
@@ -23,11 +33,11 @@ public class Account {
         this.cash = cash;
     }
 
-    public int getCard_items() {
-        return card_items;
+    public int getCart_items() {
+        return cart_items;
     }
 
-    public void setCard_items(int card_items) {
-        this.card_items = card_items;
+    public void setCart_items(int cart_items) {
+        this.cart_items = cart_items;
     }
 }
