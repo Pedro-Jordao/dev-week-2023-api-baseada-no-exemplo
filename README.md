@@ -10,7 +10,7 @@ classDiagram
     }
 
     class Cart {
-        - float total
+        - BigDecimal cash
         - int items
     }
 
